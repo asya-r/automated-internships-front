@@ -22,7 +22,7 @@ auth user =
   Http.request
     { method = "POST"
     , headers = []
-    , url = "http://localhost:8000/v1/auth/login"
+    , url = "api/v1/auth/login"
     , body = Http.jsonBody (encode user)
     , expect = Http.expectJson AuthMsg tokenDecoder
     , timeout = Nothing
